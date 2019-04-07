@@ -152,7 +152,7 @@ function fetchData() {
                 return;
         }
 
-	FetchPending = $.ajax({ url: Endpoint + '/data/aircraft.json',
+	FetchPending = $.ajax({ url: Endpoint + 'data/aircraft.json',
                                 timeout: 5000,
                                 cache: false,
                                 dataType: 'json' });
@@ -288,7 +288,7 @@ function initialize() {
 
         // Get receiver metadata, reconfigure using it, then continue
         // with initialization
-        $.ajax({ url:  Endpoint + '/data/receiver.json',
+        $.ajax({ url:  Endpoint + 'data/receiver.json',
                  timeout: 5000,
                  cache: false,
                  dataType: 'json' })
@@ -374,7 +374,7 @@ function load_history_item(i) {
         // Ref: AK9Y  --  console.log("Loading history #" + i);
         $("#loader_progress").attr('value',i);
 
-        $.ajax({ url:  Endpoint + '/data/history_' + i + '.json',
+        $.ajax({ url:  Endpoint + 'data/history_' + i + '.json',
                  timeout: 5000,
                  cache: false,
                  dataType: 'json' })
